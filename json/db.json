@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Super Admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Standard User",
+      "email": "user@gmail.com",
+      "password": "user",
+      "role": "user"
+    },
+    {
+      "id": "b43c",
+      "fullname": "Juan Mazo",
+      "email": "juad@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "tasks": [
+    {
+      "userId": "1",
+      "title": "pruebaaaaaaaa",
+      "description": "asdasdasd",
+      "dueDate": "2026-02-06",
+      "completed": false,
+      "priority": "Medium",
+      "category": "",
+      "id": "8849"
+    },
+    {
+      "id": "466a",
+      "userId": 1,
+      "title": "prueba2",
+      "description": "this is a test",
+      "dueDate": "2026-02-02",
+      "completed": false,
+      "priority": "High",
+      "category": "Personal"
+    },
+    {
+      "id": "f919",
+      "userId": "2128",
+      "title": "Completar to do",
+      "description": "complete to do",
+      "dueDate": "2026-02-05",
+      "completed": false,
+      "priority": "High",
+      "category": "Study"
+    }
+  ]
+}

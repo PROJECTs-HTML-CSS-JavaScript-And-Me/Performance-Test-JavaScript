@@ -1,0 +1,222 @@
+<!-- Sidebar -->
+<div class="sidebar">
+     <div class="logo">
+        <img src="../img/Background.svg" alt="Logo" class="logo-icon">
+        <span class="logo-text"> CRUDZASO </span>
+    </div>
+    <nav class="nav-menu">
+        <a href="#" class="nav-item active">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"> </path> </svg>
+            Dashboard
+        </a>
+        <a href="#" class="nav-item">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"> </path> </svg>
+            My Tasks
+        </a>
+        <a href="#" class="nav-item">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"> </path> </svg>
+            Profile
+        </a>
+    </nav>
+</div>
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Header -->
+    <header class="header">
+        <div class="breadcrumb">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"> </path> </svg>
+            <span style="margin-left: 8px; cursor: pointer;" id="back-to-tasks"> Back to Tasks </span>
+            <span style="margin: 0 8px; color: #d1d5db;"> > </span>
+            <span class="breadcrumb-active"> Create New </span>
+        </div>
+        <div class="header-right">
+            <button class="notification-btn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"> </path> </svg>
+            </button>
+            <div class="user-info">
+                <img src="../img/Profile.png" alt="User" class="user-avatar">
+                <div class="user-details">
+                    <div class="user-name" id="user-email"> user@email.com </div>
+                    <div class="user-role"> Admin </div>
+                </div>
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"> </path> </svg>
+            </div>
+            <button class="logout-btn" id="logout-btn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"> </path> </svg>
+            </button>
+        </div>
+    </header>
+    <!-- Content -->
+    <div class="content">
+        <div class="create-task-container">
+            <h1 class="page-title"> Create New Task </h1>
+            <div class="form-card">
+                <form id="task-form">
+                    <!-- Task Title -->
+                    <div class="form-group">
+                        <label for="task-title"> Task Title <span class="required"> * </span> </label>
+                        <input type="text" id="task-title" placeholder="e.g., Complete Quarter 3 Report" required>
+                    </div>
+                    <!-- Category and Priority Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category"> Category </label>
+                            <select id="category">
+                                <option value=""> Select category... </option>
+                                <option value="Work"> Work </option>
+                                <option value="Personal"> Personal </option>
+                                <option value="Study"> Study </option>
+                                <option value="Other"> Other </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority"> Priority </label>
+                            <select id="priority">
+                                <option value="Low"> Low </option>
+                                <option value="Medium" selected> Medium </option>
+                                <option value="High"> High </option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Status and Due Date Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="status"> Status </label>
+                            <select id="status">
+                                <option value="Pending" selected> Pending </option>
+                                <option value="In Progress"> In Progress </option>
+                                <option value="Completed"> Completed </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="due-date"> Due Date </label>
+                            <input type="date" id="due-date" placeholder="mm/dd/yyyy">
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="form-group">
+                        <label for="description"> Description </label>
+                        <textarea id="description" placeholder="Add details about this task..." rows="6"></textarea>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="form-actions">
+                        <button type="button" id="cancel-btn" class="btn btn-secondary"> Cancel </button>
+                        <button type="submit" class="btn btn-primary">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"> </path> </svg>
+                            Save Task
+                        </button>
+                    </div>
+                    <!-- Hidden inputs for form processing -->
+                    <input type="hidden" id="task-id" value="">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .create-task-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .form-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+    }
+
+    .form-group {
+        margin-bottom: 24px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #1a1a1a;
+    }
+
+    .required {
+        color: #ef4444;
+    }
+
+    .form-group input[type="text"], .form-group input[type="date"], .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        font-size: 14px;
+        font-family: inherit;
+        transition: border-color 0.2s;
+    }
+
+    .form-group input[type="text"]:focus, .form-group input[type="date"]:focus, .form-group select:focus, .form-group textarea:focus {
+        outline: none;
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.2s;
+        border: none;
+    }
+
+    .btn-primary {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+        background-color: #f3f4f6;
+        color: #1a1a1a;
+        border: 1px solid #e5e7eb;
+    }
+
+    .btn-secondary:hover {
+        background-color: #e5e7eb;
+    }
+
+    #back-to-tasks {
+        color: #2563eb;
+        text-decoration: none;
+    }
+
+    #back-to-tasks:hover {
+        text-decoration: underline;
+    }
+</style>
