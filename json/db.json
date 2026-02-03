@@ -2,55 +2,77 @@
   "users": [
     {
       "id": "1",
-      "name": "Super Admin",
-      "email": "admin@gmail.com",
-      "password": "admin",
+      "fullName": "Alex Morgan",
+      "email": "admin@crudzaso.com",
+      "password": "admin123",
       "role": "admin"
     },
     {
       "id": "2",
-      "name": "Standard User",
-      "email": "user@gmail.com",
-      "password": "user",
+      "fullName": "Sarah Lin",
+      "email": "student@university.edu",
+      "password": "student123",
       "role": "user"
     },
     {
-      "id": "b43c",
-      "fullname": "Juan Mazo",
+      "id": "f101",
+      "fullName": "Juliana",
+      "email": "juli@gmail.com",
+      "password": "juli123",
+      "role": "user"
+    },
+    {
+      "id": "ef96",
+      "fullName": "Juan",
       "email": "juad@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "role": "user"
     }
   ],
   "tasks": [
     {
-      "userId": "1",
-      "title": "pruebaaaaaaaa",
-      "description": "asdasdasd",
-      "dueDate": "2026-02-06",
-      "completed": false,
+      "id": "1",
+      "title": "Update Documentation",
+      "category": "Documentation",
       "priority": "Medium",
-      "category": "",
-      "id": "8849"
+      "status": "In Progress",
+      "dueDate": "2023-10-24",
+      "description": "Update project documentation with latest changes",
+      "assigneeId": 2,
+      "createdBy": 1
     },
     {
-      "id": "466a",
-      "userId": 1,
-      "title": "prueba2",
-      "description": "this is a test",
-      "dueDate": "2026-02-02",
-      "completed": false,
+      "id": "2",
+      "title": "Fix Login Authentication",
+      "category": "Development",
       "priority": "High",
-      "category": "Personal"
+      "status": "Pending",
+      "dueDate": "2023-10-22",
+      "description": "Resolve authentication issues in login module",
+      "assigneeId": 2,
+      "createdBy": 1
     },
     {
-      "id": "f919",
-      "userId": "2128",
-      "title": "Completar to do",
-      "description": "complete to do",
-      "dueDate": "2026-02-05",
-      "completed": false,
+      "id": "3",
+      "title": "Quarterly Review",
+      "category": "Review",
+      "priority": "Low",
+      "status": "Completed",
+      "dueDate": "2023-10-20",
+      "description": "Complete quarterly performance review",
+      "assigneeId": 2,
+      "createdBy": 1
+    },
+    {
+      "id": "4",
+      "title": "Database Optimization",
+      "category": "Database",
       "priority": "High",
-      "category": "Study"
+      "status": "In Progress",
+      "dueDate": "2023-10-25",
+      "description": "Optimize database queries for better performance",
+      "assigneeId": 2,
+      "createdBy": 1
     }
   ]
 }
