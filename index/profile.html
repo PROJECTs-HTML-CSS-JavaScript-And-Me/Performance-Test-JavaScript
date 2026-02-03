@@ -22,8 +22,13 @@
                     </div>
                 </div>
                 <nav class="sidebar-nav">
+<<<<<<< HEAD
                     <a href="./dashboard.html" class="nav-item"> <i class="bi bi-grid"> </i> Dashboard </a>
                     <a href="./dashboard.html" class="nav-item"> <i class="bi bi-check-square"> </i> My Tasks </a>
+=======
+                    <a href="./dashboard.html" class="nav-item" data-dashboard> <i class="bi bi-grid"> </i> Dashboard </a>
+                    <a href="./create-task.html" class="nav-item"> <i class="bi bi-check-square"> </i> My Tasks </a>
+>>>>>>> 04255a5e7fc8b68e1cfe60711953ee5e28da797d
                     <a href="./profile.html" class="nav-item active"> <i class="bi bi-person"> </i> Profile </a>
                 </nav>
             </aside>
@@ -140,5 +145,12 @@
         <script src="../js/config.js"> </script>
         <script src="../js/profile.js"> </script>
         <script src="../js/auth.js"> </script>
+        <script>
+            const a = document.querySelector("[data-dashboard]");
+            const string= sessionStorage.getItem("currentUser");
+            const user = JSON.parse(string);
+            if(user.role==="admin") a.setAttribute("href", "./admin-dashboard.html")
+            else a.setAttribute("href", "./dashboard.html")
+        </script>
     </body>
 </html>
