@@ -1,332 +1,301 @@
-# CRUDTASK - Sistema de Gestión de Tareas Académicas
+# CRUDTASK - Task Management Application.
 
-Sistema completo de gestión de tareas académicas desarrollado con HTML, CSS (Bootstrap Icons), JavaScript Vanilla y JSON Server.
+<div align="center">
+  <img src="img/Background.svg" alt="CRUDTASK Logo" width="120">
+  <h3> CRUDZASO </h3>
+  <p> A complete task management application with authentication and role-based access control. </p>
+</div>
 
-## 📋 Descripción del Proyecto
+---
 
-CRUDTASK es una aplicación web que permite a usuarios y administradores gestionar tareas académicas de manera eficiente. El sistema cuenta con autenticación de usuarios, manejo de roles (user/admin), y todas las operaciones CRUD para tareas.
+## Table of Contents.
 
-## 🎯 Características Principales
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [User Accounts](#-user-accounts)
+- [API Endpoints](#-api-endpoints)
+- [Project Screenshots](#-project-screenshots)
+- [License](#-license)
 
-### Módulo de Usuario (User)
-- ✅ Registro de cuenta nueva (rol "user" asignado automáticamente)
-- ✅ Inicio de sesión con validación de credenciales
-- ✅ Gestión de tareas propias (listar, crear, editar, eliminar)
-- ✅ Cambio de estado de tareas (Pending, In Progress, Completed)
-- ✅ Visualización y edición de perfil
-- ✅ Dashboard con estadísticas personales
-- ✅ Búsqueda y filtrado de tareas
+---
 
-### Módulo de Administrador (Admin)
-- ✅ Inicio de sesión con rol admin
-- ✅ Dashboard con métricas globales del sistema
-- ✅ Gestión de todas las tareas (ver, editar, eliminar)
-- ✅ Asignación de tareas a usuarios
-- ✅ Cambio de estados de cualquier tarea
-- ✅ Vista de todos los usuarios del sistema
-- ✅ Búsqueda y filtrado avanzado
+## Overview.
 
-### Funcionalidades Generales
-- ✅ Sistema de autenticación completo
-- ✅ Manejo de sesión con SessionStorage
-- ✅ Protección de rutas según rol
-- ✅ Diseño responsive
-- ✅ Interfaz moderna y profesional
-- ✅ Validación de formularios
-- ✅ Alertas y notificaciones
-- ✅ API RESTful con JSON Server
+CRUDTASK is a full-featured task management application built with vanilla JavaScript, HTML, and CSS. It demonstrates proper CRUD (Create, Read, Update, Delete) operations with a RESTful API architecture using JSON Server as a mock backend.
 
-## 🛠️ Tecnologías Utilizadas
+---
 
-### Frontend
-- **HTML5**: Estructura semántica
-- **CSS3**: Estilos personalizados con variables CSS
-- **Bootstrap Icons 1.11.3**: Sistema de iconos
-- **JavaScript (Vanilla)**: Lógica de aplicación sin frameworks
+## Features.
 
-### Backend (Simulado)
-- **JSON Server**: API REST falsa para simulación
+### Authentication System.
+- **User Login/Register** - Secure authentication with email and password.
+- **Session Management** - Uses sessionStorage for maintaining user sessions.
+- **Role-Based Access Control** - Separate dashboards for Admin and User roles.
+- **Route Protection** - Prevents unauthorized access to protected pages.
 
-## 📁 Estructura del Proyecto
+### Task Management.
+- **Create Tasks** - Add new tasks with title, description, category, priority, and due date.
+- **Read Tasks** - View all tasks in a responsive table with filtering.
+- **Update Tasks** - Edit existing task details.
+- **Delete Tasks** - Remove tasks with confirmation.
 
-```
-crudtask/
-├── index.html              # Página de login
-├── register.html           # Página de registro
-├── dashboard.html          # Dashboard de usuario
-├── admin-dashboard.html    # Dashboard de administrador
-├── create-task.html        # Crear/editar tareas
-├── profile.html            # Perfil de usuario
-├── css/
-│   ├── styles.css          # Estilos globales
-│   └── dashboard.css       # Estilos de dashboard
-├── js/
-│   ├── config.js           # Configuración y utilidades
-│   ├── auth.js             # Autenticación
-│   ├── dashboard.js        # Dashboard de usuario
-│   ├── admin-dashboard.js  # Dashboard de admin
-│   ├── create-task.js      # Gestión de tareas
-│   └── profile.js          # Gestión de perfil
-├── data/
-│   └── db.json             # Base de datos JSON Server
-└── README.md               # Documentación
-```
+### Dashboard Features.
+- **User Statistics** - View total, completed, and pending task counts.
+- **Progress Tracking** - Visual progress indicator for task completion.
+- **Priority Badges** - Color-coded priority indicators (High/Medium/Low).
+- **Status Badges** - Visual status indicators (Pending/In Progress/Completed).
+- **Search Functionality** - Real-time task search by title, description, or category.
+- **Filter Tabs** - Filter tasks by status (All/Pending/Completed).
 
-## 🚀 Instalación y Configuración
+### UI/UX Features.
+- **Responsive Design** - Works on desktop and mobile devices.
+- **Bootstrap Integration** - Modern styling with Bootstrap 5.
+- **Custom Icons** - Bootstrap Icons integration.
+- **Loading States** - Visual feedback during API operations.
+- **Alert System** - Toast notifications for success/error messages.
 
-### Requisitos Previos
-- Node.js (versión 14 o superior)
-- npm (normalmente viene con Node.js)
+---
 
-### Paso 1: Instalar JSON Server
+## Tech Stack.
 
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Semantic markup structure |
+| **CSS3** | Custom styling and responsive design |
+| **JavaScript (ES6+)** | Application logic and API integration |
+| **Bootstrap 5** | UI framework for responsive design |
+| **Bootstrap Icons** | Icon library |
+| **JSON Server** | Mock REST API backend |
+
+
+## Getting Started.
+
+### Prerequisites.
+
+- **Node.js** (v14 or higher).
+- **npm** (Node Package Manager).
+- A modern web browser (Chrome, Firefox, Edge).
+
+### Installation.
+
+1. **Navigate to the project directory**
+   ```bash
+   cd "PT - CrudTask/json"
+   ```
+
+2. **Install JSON Server**
+   ```bash
+   npm install
+   ```
+
+3. **Start the API server**
+   ```bash
+   npx json-server --watch db.json --port 3000
+   ```
+
+4. **Open the application**
+   - Open `PT - CrudTask/index/index.html` in your web browser
+   - Or use a local server (e.g., Live Server extension in VSCode)
+
+### Alternative: Using the ZIP file.
+
+If you have the compressed version:
 ```bash
-npm install -g json-server
+unzip "PT - CrudTask.zip"
+cd "PT - CrudTask/json"
+npm install
+npx json-server --watch db.json --port 3000
 ```
 
-### Paso 2: Iniciar el Servidor
+---
 
-Desde el directorio raíz del proyecto:
+## User Accounts.
 
-```bash
-json-server --watch data/db.json --port 3000
+The application comes with pre-configured user accounts for testing:
+
+| Email | Password | Role | Full Name |
+|-------|----------|------|-----------|
+| admin@crudzaso.com | admin123 | Admin | Alex Morgan |
+| student@university.edu | student123 | User | Sarah Lin |
+| juli@gmail.com | juli123 | User | Juliana |
+| juad@gmail.com | 123456 | User | Juan |
+
+### Role Differences.
+
+**Admin Features:**
+- Access to admin dashboard with additional management capabilities.
+- Full view of all tasks across users.
+- Extended statistics and monitoring.
+
+**User Features:**
+- Personal task dashboard.
+- Manage only assigned tasks.
+- Create, edit, and delete own tasks.
+
+---
+
+## API Endpoints.
+
+The application uses JSON Server to provide RESTful API endpoints:
+
+### Base URL.
+```
+http://localhost:3000
 ```
 
-El servidor estará disponible en: `http://localhost:3000`
+### Endpoints.
 
-### Paso 3: Abrir la Aplicación
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/users` | Get all users |
+| GET | `/users/:id` | Get user by ID |
+| POST | `/users` | Create new user |
+| PUT | `/users/:id` | Update user |
+| PATCH | `/users/:id` | Partial user update |
+| DELETE | `/users/:id` | Delete user |
+| GET | `/tasks` | Get all tasks |
+| GET | `/tasks/:id` | Get task by ID |
+| POST | `/tasks` | Create new task |
+| PUT | `/tasks/:id` | Update task |
+| PATCH | `/tasks/:id` | Partial task update |
+| DELETE | `/tasks/:id` | Delete task |
 
-Abre el archivo `index.html` en tu navegador web, o usa un servidor local como Live Server (extensión de VS Code).
 
-**Opción con Live Server:**
-```bash
-# Si tienes VS Code con Live Server instalado
-# Click derecho en index.html > Open with Live Server
+## Key Components.
+
+### Authentication Flow.
+
+1. User enters credentials on login page.
+2. Application validates against `/users` endpoint.
+3. On success, user session is stored in sessionStorage.
+4. User is redirected based on role (admin/user).
+5. Protected routes check for valid session.
+
+### API Utility Module (`config.js`).
+
+The application includes a comprehensive API utility with:
+- **GET** - Fetch data from server.
+- **POST** - Create new resources.
+- **PUT** - Update entire resources.
+- **PATCH** - Partial resource updates.
+- **DELETE** - Remove resources.
+
+### Session Management.
+
+```javascript
+// Save session
+session.save(user);
+
+// Get current session
+session.get();
+
+// Check if logged in
+session.exists();
+
+// Logout
+session.destroy();
+
+// Check role
+session.isAdmin();
+session.isUser();
 ```
 
-## 👥 Usuarios de Prueba
+---
 
-### Usuario Administrador
-- **Email**: `admin@crudzaso.com`
-- **Password**: `admin123`
-- **Rol**: admin
+## Task Data Structure.
 
-### Usuario Normal
-- **Email**: `student@university.edu`
-- **Password**: `student123`
-- **Rol**: user
-
-## 🔐 Sistema de Autenticación
-
-### Flujo de Registro
-1. Usuario completa formulario de registro
-2. Sistema valida datos (email único, contraseñas coinciden)
-3. Usuario se crea con rol "user" automáticamente
-4. Sesión se guarda en SessionStorage
-5. Redirección a dashboard de usuario
-
-### Flujo de Login
-1. Usuario ingresa credenciales
-2. Sistema valida contra API
-3. Sesión se guarda con datos del usuario
-4. Redirección según rol:
-   - Admin → `admin-dashboard.html`
-   - User → `dashboard.html`
-
-### Protección de Rutas
-Cada página protegida verifica:
-- ✅ Existencia de sesión activa
-- ✅ Rol apropiado para la página
-- ✅ Redirige a login si no hay sesión
-- ✅ Redirige a dashboard correcto si rol no coincide
-
-## 📊 Funcionalidades de Tareas
-
-### Usuario Normal (User)
-- **Ver**: Solo sus propias tareas
-- **Crear**: Tareas asignadas automáticamente a sí mismo
-- **Editar**: Solo sus propias tareas
-- **Eliminar**: Solo sus propias tareas
-- **Cambiar estado**: De sus propias tareas
-
-### Administrador (Admin)
-- **Ver**: Todas las tareas del sistema
-- **Crear**: Tareas y asignarlas a cualquier usuario
-- **Editar**: Cualquier tarea
-- **Eliminar**: Cualquier tarea
-- **Cambiar estado**: De cualquier tarea
-- **Ver métricas**: Estadísticas globales del sistema
-
-## 🎨 Características de Diseño
-
-### Paleta de Colores
-- **Primario**: `#2563eb` (Azul)
-- **Éxito**: `#10b981` (Verde)
-- **Advertencia**: `#f59e0b` (Naranja)
-- **Peligro**: `#ef4444` (Rojo)
-- **Secundario**: `#64748b` (Gris)
-
-### Componentes UI
-- Cards con sombras sutiles
-- Badges de estado con colores semánticos
-- Botones con hover effects
-- Formularios con validación visual
-- Tablas responsivas
-- Sidebar fijo con navegación
-- Header con información de usuario
-- Estadísticas con iconos
-
-### Responsive Design
-- Desktop: Sidebar completo + contenido principal
-- Tablet: Sidebar reducido
-- Mobile: Sidebar colapsable, tabla scrollable
-
-## 🔧 API Endpoints (JSON Server)
-
-### Usuarios
-- `GET /users` - Obtener todos los usuarios
-- `GET /users/:id` - Obtener usuario específico
-- `POST /users` - Crear nuevo usuario
-- `PUT /users/:id` - Actualizar usuario
-- `DELETE /users/:id` - Eliminar usuario
-
-### Tareas
-- `GET /tasks` - Obtener todas las tareas
-- `GET /tasks/:id` - Obtener tarea específica
-- `POST /tasks` - Crear nueva tarea
-- `PUT /tasks/:id` - Actualizar tarea
-- `PATCH /tasks/:id` - Actualizar parcialmente
-- `DELETE /tasks/:id` - Eliminar tarea
-
-### Búsqueda y Filtrado
-JSON Server soporta query parameters:
-- `GET /tasks?assigneeId=2` - Tareas de un usuario
-- `GET /tasks?status=Pending` - Tareas pendientes
-- `GET /tasks?priority=High` - Tareas de alta prioridad
-
-## 📱 Páginas de la Aplicación
-
-### 1. Login (`index.html`)
-- Formulario de inicio de sesión
-- Validación de credenciales
-- Toggle de visibilidad de contraseña
-- Link a registro
-
-### 2. Registro (`register.html`)
-- Formulario de registro completo
-- Validación de email único
-- Confirmación de contraseña
-- Asignación automática de rol "user"
-
-### 3. Dashboard Usuario (`dashboard.html`)
-- Estadísticas personales
-- Tabla de tareas propias
-- Filtros por estado
-- Búsqueda de tareas
-- Botón para crear nueva tarea
-
-### 4. Dashboard Admin (`admin-dashboard.html`)
-- Estadísticas globales del sistema
-- Tabla con todas las tareas
-- Información de usuarios asignados
-- Gestión completa de tareas
-
-### 5. Crear/Editar Tarea (`create-task.html`)
-- Formulario completo de tarea
-- Campo de asignación (solo para admin)
-- Validación de campos requeridos
-- Modo creación y edición
-
-### 6. Perfil (`profile.html`)
-- Información del usuario
-- Edición de datos personales
-- Cambio de contraseña
-- Avatar con iniciales
-
-## 🔒 Reglas de Seguridad
-
-1. **Validación de Sesión**: Todas las páginas protegidas verifican sesión activa
-2. **Validación de Rol**: Los usuarios no pueden acceder a vistas de admin
-3. **Validación de Datos**: Todos los formularios validan entrada de usuario
-4. **Protección CSRF**: SessionStorage en lugar de cookies
-5. **Sanitización**: Prevención de XSS en inputs
-
-## 🐛 Solución de Problemas
-
-### JSON Server no inicia
-```bash
-# Verificar que está instalado
-json-server --version
-
-# Reinstalar si es necesario
-npm install -g json-server
+```json
+{
+  "id": "1",
+  "title": "Update Documentation",
+  "category": "Documentation",
+  "priority": "Medium",
+  "status": "In Progress",
+  "dueDate": "2023-10-24",
+  "description": "Update project documentation with latest changes",
+  "assigneeId": 2,
+  "createdBy": 1
+}
 ```
 
-### Error de CORS
-JSON Server incluye CORS por defecto. Si hay problemas:
-```bash
-json-server --watch data/db.json --port 3000 --host 0.0.0.0
+### Task Fields.
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | String | Unique identifier |
+| `title` | String | Task title |
+| `category` | String | Task category (Development, Documentation, etc.) |
+| `priority` | String | Priority level (High/Medium/Low) |
+| `status` | String | Current status |
+| `dueDate` | Date | Task deadline |
+| `description` | String | Detailed task description |
+| `assigneeId` | Number | Assigned user ID |
+| `createdBy` | Number | Creator user ID |
+
+---
+
+## User Data Structure.
+
+```json
+{
+  "id": "1",
+  "fullName": "Alex Morgan",
+  "email": "admin@crudzaso.com",
+  "password": "admin123",
+  "role": "admin"
+}
 ```
 
-### Las tareas no se cargan
-1. Verificar que JSON Server está corriendo
-2. Abrir `http://localhost:3000/tasks` en el navegador
-3. Verificar que el archivo `data/db.json` existe
+---
 
-### No se puede iniciar sesión
-1. Verificar credenciales en `data/db.json`
-2. Verificar que la API responde: `http://localhost:3000/users`
-3. Revisar la consola del navegador para errores
+## Additional Resources.
 
-## 📈 Mejoras Futuras
+- **Project Requirements**: See `Reference/Enunciado Prueba de Desempeño- M3 JavaScript.pdf`
+- **JSON Server Documentation**: https://github.com/typicode/json-server
+- **Bootstrap 5 Documentation**: https://getbootstrap.com/docs/5.3/
 
-- [ ] Backend real con Node.js + Express
-- [ ] Base de datos PostgreSQL o MongoDB
-- [ ] Autenticación con JWT
-- [ ] Paginación de tareas
-- [ ] Notificaciones en tiempo real
-- [ ] Historial de cambios en tareas
-- [ ] Exportación de reportes (PDF, Excel)
-- [ ] Adjuntar archivos a tareas
-- [ ] Comentarios en tareas
-- [ ] Sistema de notificaciones por email
+---
 
-## 👨‍💻 Desarrollo
+## Project Structure
 
-### Agregar Nueva Tarea
-1. Usuario llena formulario en `create-task.html`
-2. JavaScript valida datos
-3. POST a `/tasks` con datos de tarea
-4. Redirección a dashboard correspondiente
+```
+PT - CrudTask/
+├── 📄 README.md
+├── 📁 css/
+│   ├── dashboard.css      # Dashboard-specific styles
+│   └── styles.css         # Global styles
+├── 📁 img/
+│   ├── Background.svg     # App logo/icon
+│   ├── Border.png
+│   ├── Profile Avatar.png
+│   ├── Profile.png
+│   └── SVG.svg
+├── 📁 index/
+│   ├── index.html         # Login page
+│   ├── register.html      # Registration page
+│   ├── dashboard.html     # User dashboard
+│   ├── admin-dashboard.html # Admin dashboard
+│   ├── create-task.html   # Create/edit task page
+│   └── profile.html       # User profile page
+├── 📁 js/
+│   ├── auth.js            # Authentication logic
+│   ├── config.js          # API configuration and utilities
+│   ├── dashboard.js       # User dashboard logic
+│   ├── admin-dashboard.js  # Admin dashboard logic
+│   ├── create-task.js     # Task creation/editing logic
+│   └── profile.js         # Profile management logic
+├── 📁 json/
+│   ├── db.json            # Database (users and tasks)
+│   └── package.json       # Dependencies
+└── 📁 Reference/
+    ├── Enunciado Prueba de Desempeño- M3 JavaScript.pdf
+    └── Imagen pegada*.png  # Reference screenshots
+```
 
-### Editar Tarea
-1. Click en botón editar (ícono lápiz)
-2. Redirección a `create-task.html?id={taskId}`
-3. Sistema carga datos de tarea
-4. Usuario modifica y guarda
-5. PUT a `/tasks/{id}` con datos actualizados
+---
 
-### Eliminar Tarea
-1. Click en botón eliminar (ícono basura)
-2. Confirmación con `confirm()`
-3. DELETE a `/tasks/{id}`
-4. Recarga de tabla de tareas
-
-## 📝 Notas Importantes
-
-- **Persistencia**: Los datos se guardan en `data/db.json` y persisten entre reinicios
-- **Sesión**: La sesión se guarda en SessionStorage (se pierde al cerrar pestaña)
-- **Roles**: Solo hay dos roles: "user" y "admin"
-- **Validación**: Toda validación es del lado del cliente (en producción usar backend)
-
-## 🤝 Contribuir
-
-Este proyecto fue desarrollado como parte de una actividad académica siguiendo especificaciones estrictas.
-
-## 📄 Licencia
-
-Proyecto educativo - Todos los derechos reservados.
-
-## ✨ Créditos
-
-Desarrollado siguiendo las especificaciones del proyecto CRUDTASK para gestión de tareas académicas.
+<div align="center">
+  <p> CRUDTASK © 2023 </p>
+</div>
