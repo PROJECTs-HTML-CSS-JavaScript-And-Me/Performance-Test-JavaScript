@@ -23,7 +23,7 @@
                 </div>
                 <nav class="sidebar-nav">
                     <a href="./dashboard.html" class="nav-item active"> <i class="bi bi-grid"> </i> Dashboard </a>
-                    <a href="./dashboard.html" class="nav-item"> <i class="bi bi-check-square"> </i> My Tasks </a>
+                    <a href="./create-task.html" class="nav-item"> <i class="bi bi-check-square"> </i> My Tasks </a>
                     <a href="./profile.html" class="nav-item"> <i class="bi bi-person"> </i> Profile </a>
                 </nav>
             </aside>
@@ -118,5 +118,11 @@
         <!-- Scripts -->
         <script src="../js/config.js"> </script>
         <script src="../js/dashboard.js"> </script>
+        <script defer>
+            const a = document.querySelector("[data-dashboard]")
+            console.log(a)
+            const user = JSON.parse(localStorage.getItem("currentUser"));
+            console.log(user.role)
+        </script>
     </body>
 </html>
