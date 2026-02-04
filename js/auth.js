@@ -157,9 +157,6 @@ function showSuccess(message) {
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function () {
-    // Verificar si ya hay sesión activa y redirigir
-    redirectIfAuthenticated();
-
     // Login form
     const loginForm = document.getElementById('login-form');
     if (loginForm) {

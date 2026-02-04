@@ -178,13 +178,12 @@ function checkUserAuth() {
 
     return true;
 }
+const user = JSON.parse(sessionStorage.getItem("currenUser"))
+if(user !== null) {
+    if(user.role==="admin")location = "./index/admin-dashboard.html"
+    else if(user.role==="user")location = "./index/dashboard.html"
+}
 
-/* Redireccionar si ya hay sesión */
-function redirectIfAuthenticated() {
-    if (session.exists()) { 
-        window.location = '../index/admin-dashboard.html';
-    }
-} 
 
 // Utilidades de UI
 const ui = {
@@ -295,4 +294,3 @@ window.validator = validator;
 window.checkAuth = checkAuth;
 window.checkAdminAuth = checkAdminAuth;
 window.checkUserAuth = checkUserAuth;
-window.redirectIfAuthenticated = redirectIfAuthenticated;
