@@ -299,4 +299,3 @@ PT - CrudTask/
 <div align="center">
   <p> CRUDTASK © 2023 </p>
 </div>
-
